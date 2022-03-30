@@ -1,8 +1,8 @@
 version: '2'
 
 services:
- NERHEVY:
-  container_name: NERHEVY
+ ner:
+  container_name: ner
   build: .
   ports:
   - "8000:5000"
