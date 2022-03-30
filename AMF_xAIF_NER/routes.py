@@ -6,7 +6,7 @@ from app.hevyspacy import getjson_aif
 
 app = Flask(__name__)
 
-@app.route('/noop', methods=['GET', 'POST'])
+@app.route('/ner', methods=['GET', 'POST'])
 def amf_schemes():
 	if request.method == 'POST':
 		f = request.files['file']
