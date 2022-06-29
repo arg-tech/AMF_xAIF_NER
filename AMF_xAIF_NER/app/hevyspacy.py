@@ -52,11 +52,11 @@ def parse_ents(doc,new_node2tmpdict):
 				print(new_node2tmpdict)
 			elif ent.label_ == "DATE":
 				new_node2tmpdict["atTime"] = ent.text
-			elif ent.label_ == "ORG" | "PRODUCT":
+			elif ent.label_ == "ORG" or "PRODUCT":
 				new_node2tmpdict["involved"] = ent.text
 			elif ent.label_ == "EVENT":
 				new_node2tmpdict["type"] = ent.text
-			elif ent.label_ == "LOC" | "GPE":
+			elif ent.label_ == "LOC" or "GPE":
     				new_node2tmpdict["atPlace"] = ent.text
 			else: 
 				print('No named entities found.')
